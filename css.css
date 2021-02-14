@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ciach */
+
+#bannerSearchCMS {
+  position: relative;
+}
+
+.navigation {
+  width: 60px;
+  margin: 0 auto;
+}
+
+.button-left {
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  color: black;
+  background-color: lightgray;
+  border-radius: 2px;
+  position: absolute;
+  top: 40%;
+  left: 5px;
+}
+
+.button-right {
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  color: black;
+  background-color: lightgray;
+  border-radius: 3px;
+  position: absolute;
+  top: 40%;
+  right: 5px;
+}
+
+.button-right:hover,
+.button-left:hover {
+  color: white;
+  background-color: red;
+}
+
+/* ciach */

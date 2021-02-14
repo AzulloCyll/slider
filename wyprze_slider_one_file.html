@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="max-width: 1280px;">
+
+    <!-- ciach -->
+
+    <style>
+        #bannerSearchCMS {
+            position: relative;
+        }
+
+        .navigation {
+            width: 60px;
+            margin: 0 auto;
+        }
+
+        .button-left {
+            font-family: "Lucida Sans", "Lucida Sans Regular";
+            font-weight: bold;
+            padding: 10px;
+            border: 0;
+            color: black;
+            background-color: lightgray;
+            border-radius: 2px;
+            position: absolute;
+            top: 40%;
+            left: 5px;
+        }
+
+        .button-right {
+            font-family: "Lucida Sans", "Lucida Sans Regular";
+            font-weight: bold;
+            padding: 10px;
+            border: 0;
+            color: black;
+            background-color: lightgray;
+            border-radius: 3px;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+        }
+
+        .button-right:hover,
+        .button-left:hover {
+            color: white;
+            background-color: red;
+        }
+    </style>
+
+    <!-- tu linki -->
+    <div id="bannerSearchCMS" class="cm">
+
+        <!-- <a href="https://www.wyprzedazebielizny.pl/pl/menu/bestsellerowe-biustonosze-984.html" target="_blank">
+            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_desktop.jpg"
+                alt="oferta banner"
+                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_desktop.jpg"
+                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_tablet.jpg"
+                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_phone.jpg" /></a> -->
+
+        <a href="https://www.wyprzedazebielizny.pl/pl/menu/moda-i-dodatki/na-zime-919.html" target="_blank">
+            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_desktop.jpg"
+                alt="oferta banner"
+                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_desktop.jpg"
+                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_tablet.jpg"
+                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_phone.jpg" /></a>
+
+        <a href="https://www.wyprzedazebielizny.pl/pl/menu/wyprzedaze/bielizna-sexy-671.html" target="_blank">
+            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_desktop.jpg"
+                alt="oferta banner"
+                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_desktop.jpg"
+                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_tablet.jpg"
+                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_phone.jpg" /></a>
+
+        <div class="navigation">
+            <button class="button-left">&#10094;</button>
+            <button class="button-right">&#10095;</button>
+        </div>
+    </div>
+    <script>
+        var show = document.getElementById("bannerSearchCMS")
+        show.style.display = "block" //zawsze pokazuj baner
+
+        var $leftButton = document.getElementsByClassName("button-left")[0];
+        var $rightButton = document.getElementsByClassName("button-right")[0];
+
+        $leftButton.onclick = function (event) {
+            plusDivs(-1);
+        };
+
+        $rightButton.onclick = function (event) {
+            plusDivs(1);
+        };
+
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("rwd-src");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1;
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image time in ms
+        }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs((slideIndex += n));
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("rwd-src");
+            if (n > x.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = x.length;
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        //poprawka wyswietlania na wyprzach
+        const bannerElement = document.getElementById("bannerSearchCMS");
+        const layout = document.getElementById("layout")
+        layout.prepend(bannerElement);
+        bannerElement.style.maxWidth = "1170px";
+        bannerElement.style.margin = "0 auto";
+        bannerElement.style.marginBottom = "20px"
+
+
+    </script>
+
+    <!-- ciach -->
+
+</body>
+
+</html>
