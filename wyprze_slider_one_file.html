@@ -56,33 +56,50 @@
 
     <!-- tu linki -->
     <div id="bannerSearchCMS" class="cm">
+        <a href="https://www.wyprzedazebielizny.pl/pl/menu/bestsellerowe-biustonosze-984.html" target="_blank">
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/biustonosze/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/biustonosze/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/biustonosze/dlugi_baner_phone.jpg">
+                <img src="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/biustonosze/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
 
-        <!-- <a href="https://www.wyprzedazebielizny.pl/pl/menu/bestsellerowe-biustonosze-984.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_desktop.jpg"
-                alt="oferta banner"
-                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/15_01_2021/dlugi_baner_phone.jpg" /></a> -->
+        <a href="https://www.wyprzedazebielizny.pl/pl/menu/bielizna-damska/nocna-173.html" target="_blank">
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nocna/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nocna/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nocna/dlugi_baner_phone.jpg">
+                <img src="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nocna/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
 
-        <a href="https://www.wyprzedazebielizny.pl/pl/menu/moda-i-dodatki/na-zime-919.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_desktop.jpg"
-                alt="oferta banner"
-                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/b/dlugi_baner_phone.jpg" /></a>
+        <a href="https://www.wyprzedazebielizny.pl/pl/menu/bielizna-damska/piekne-nogi-174.html" target="_blank">
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nogi/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nogi/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nogi/dlugi_baner_phone.jpg">
+                <img src="https://www.wyprzedazebielizny.pl/data/include/cms/wyprzedaze-bielizny/slider/nogi/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
 
-        <a href="https://www.wyprzedazebielizny.pl/pl/menu/wyprzedaze/bielizna-sexy-671.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_desktop.jpg"
-                alt="oferta banner"
-                data-src_desktop="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/wyprzedaze-bielizny/slider/c/dlugi_baner_phone.jpg" /></a>
+        <!--koniec linków-->
 
-        <div class="navigation">
-            <button class="button-left">&#10094;</button>
-            <button class="button-right">&#10095;</button>
-        </div>
+        <div class="navigation"><button class="button-left">❮</button> <button class="button-right">❯</button></div>
     </div>
+
     <script>
         var show = document.getElementById("bannerSearchCMS")
         show.style.display = "block" //zawsze pokazuj baner
@@ -103,7 +120,7 @@
 
         function carousel() {
             var i;
-            var x = document.getElementsByClassName("rwd-src");
+            var x = document.getElementsByClassName("rwdsrc");
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
@@ -124,7 +141,7 @@
 
         function showDivs(n) {
             var i;
-            var x = document.getElementsByClassName("rwd-src");
+            var x = document.getElementsByClassName("rwdsrc");
             if (n > x.length) {
                 slideIndex = 1;
             }
@@ -138,15 +155,16 @@
         }
 
         //poprawka wyswietlania na wyprzach
-        const bannerElement = document.getElementById("bannerSearchCMS");
+        const bannerEl = document.getElementById("bannerSearchCMS");
         const layout = document.getElementById("layout")
-        layout.prepend(bannerElement);
-        bannerElement.style.maxWidth = "1170px";
-        bannerElement.style.margin = "0 auto";
-        bannerElement.style.marginBottom = "20px"
-
+        layout.prepend(bannerEl);
+        bannerEl.style.maxWidth = "1170px";
+        bannerEl.style.margin = "0 auto";
+        bannerEl.style.marginBottom = "20px"
 
     </script>
+
+
 
     <!-- ciach -->
 

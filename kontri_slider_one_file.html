@@ -60,22 +60,44 @@
         <!-- tu linki -->
 
         <a href="https://www.kontri.pl/pl/menu/bestsellerowe-biustonosze-710.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/bannery/26a_01_2021/dlugi_baner_desktop.jpg" alt="oferta banner"
-                data-src_desktop="/data/include/cms/bannery/26a_01_2021/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/bannery/26a_01_2021/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/bannery/26a_01_2021/dlugi_baner_phone.jpg" /></a>
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/05_03_2021/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/05_03_2021/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/05_03_2021/dlugi_baner_phone.jpg">
+                <img src="https://www.kontri.pl/data/include/cms/bannery/05_03_2021/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
+
+        <a href="https://www.kontri.pl/pl/menu/bielizna/piekne-nogi-286.html" target="_blank">
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/rajstopy/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/rajstopy/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/rajstopy/dlugi_baner_phone.jpg">
+                <img src="https://www.kontri.pl/data/include/cms/bannery/_slider/rajstopy/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
 
         <a href="https://www.kontri.pl/pl/menu/majtki-klasyczne-966.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/bannery/26b_01_2021/dlugi_baner_desktop.jpg" alt="oferta banner"
-                data-src_desktop="/data/include/cms/bannery/26b_01_2021/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/bannery/26b_01_2021/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/bannery/26b_01_2021/dlugi_baner_phone.jpg" /></a>
+            <picture class="rwdsrc">
+                <source media="(min-width:1024px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/majtki/dlugi_baner_desktop.jpg">
+                <source media="(min-width:750px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/majtki/dlugi_baner_tablet.jpg">
+                <source media="(min-width:0px)"
+                    srcset="https://www.kontri.pl/data/include/cms/bannery/_slider/majtki/dlugi_baner_phone.jpg">
+                <img src="https://www.kontri.pl/data/include/cms/bannery/_slider/majtki/dlugi_baner_desktop.jpg"
+                    alt="oferta banner">
+            </picture>
+        </a>
 
-        <a href="https://www.kontri.pl/pl/menu/kolekcja-czapek-970.html" target="_blank">
-            <img class="rwd-src" src="/data/include/cms/bannery/_slider/b/dlugi_baner_desktop.jpg" alt="oferta banner"
-                data-src_desktop="/data/include/cms/bannery/_slider/b/dlugi_baner_desktop.jpg"
-                data-src_tablet="/data/include/cms/bannery/_slider/b/dlugi_baner_tablet.jpg"
-                data-src_mobile="/data/include/cms/bannery/_slider/b/dlugi_baner_phone.jpg" /></a>
 
         <!-- koniec linków -->
 
@@ -83,6 +105,7 @@
             <button class="button-left">&#10094;</button>
             <button class="button-right">&#10095;</button>
         </div>
+
     </div>
     <script>
         var $leftButton = document.getElementsByClassName("button-left")[0];
@@ -101,7 +124,7 @@
 
         function carousel() {
             var i;
-            var x = document.getElementsByClassName("rwd-src");
+            var x = document.getElementsByClassName("rwdsrc");
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
@@ -122,7 +145,7 @@
 
         function showDivs(n) {
             var i;
-            var x = document.getElementsByClassName("rwd-src");
+            var x = document.getElementsByClassName("rwdsrc");
             if (n > x.length) {
                 slideIndex = 1;
             }
@@ -134,6 +157,13 @@
             }
             x[slideIndex - 1].style.display = "block";
         }
+
+        //fix wyswietlania
+        const bannerEl = document.getElementById("bannerSearchCMS");
+        const beforeEL = document.getElementById("content")
+        const layout = document.getElementById("layout")
+        layout.insertBefore(bannerEl, beforeEL)
+
     </script>
 
     <!-- ciach -->
